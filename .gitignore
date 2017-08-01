@@ -18,5 +18,8 @@
 *.tar.gz
 *.rar
 
+# Constants
+/Learning/learningDagger/app/src/main/java/com/raywenderlich/android/deezfoodz/app/Constants.java
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*

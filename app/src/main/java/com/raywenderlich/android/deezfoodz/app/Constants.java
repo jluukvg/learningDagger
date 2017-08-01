@@ -26,7 +26,7 @@ public class Constants {
 
   public static final String BASE_URL = "https://api.nal.usda.gov";
 
-  public static final String API_KEY = "YOUR_API_KEY";
+  public static final String API_KEY = "dVuOaCKdNry2UEWtxj9thn351l3QdcnqsbHgKVnO";
 
   public static final String SUGAR_NUTRIENT = "269";
 
