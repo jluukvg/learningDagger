@@ -22,12 +22,29 @@
 
 package com.raywenderlich.android.deezfoodz.app;
 
+import com.raywenderlich.android.deezfoodz.dagger.AppComponent;
+import com.raywenderlich.android.deezfoodz.dagger.AppModule;
+import com.raywenderlich.android.deezfoodz.dagger.DaggerAppComponent;
+
 import android.app.Application;
 
 public class DeezFoodzApplication extends Application {
 
+  private AppComponent appComponent;
+
+  public AppComponent getAppComponent() {
+    return appComponent;
+  }
+
+  protected AppComponent initDagger(DeezFoodzApplication application) {
+    return DaggerAppComponent.builder()
+            .appModule(new AppModule(application))
+            .build();
+  }
+
   @Override
   public void onCreate() {
-    super.onCreate();
+      super.onCreate();
+      appComponent = initDagger(this);
   }
 }
