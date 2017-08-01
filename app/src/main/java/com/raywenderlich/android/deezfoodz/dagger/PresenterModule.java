@@ -1,5 +1,7 @@
 package com.raywenderlich.android.deezfoodz.dagger;
 
+import com.raywenderlich.android.deezfoodz.ui.food.FoodPresenter;
+import com.raywenderlich.android.deezfoodz.ui.food.FoodPresenterImpl;
 import com.raywenderlich.android.deezfoodz.ui.foodz.FoodzPresenter;
 import com.raywenderlich.android.deezfoodz.ui.foodz.FoodzPresenterImpl;
 
@@ -15,6 +17,12 @@ public class PresenterModule {
     @Singleton
     FoodzPresenter provideFoodzPresenter() {
         return new FoodzPresenterImpl();
+    }
+
+    @Provides
+    @Singleton
+    FoodPresenter provideFoodPresenter() {
+        return new FoodPresenterImpl();
     }
 
 }
